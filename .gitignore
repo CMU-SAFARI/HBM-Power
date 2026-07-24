@@ -1,0 +1,11 @@
+temp/
+data/new/
+data/merged/
+figures/merged/
+results/
+
+# Artifact-evaluation SSH keys. Keep both private and public keys out of git.
+/aevaluator1
+/aevaluator1.pub
+__pycache__/
+*.pyc

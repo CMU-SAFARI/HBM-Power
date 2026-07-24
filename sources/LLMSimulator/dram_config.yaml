@@ -1,0 +1,35 @@
+Frontend:
+  impl: PIMController
+  clock_ratio: 1
+  path: example_inst.trace 
+
+MemorySystem:
+  impl: PIMDRAMSystem
+  clock_ratio: 1
+
+  DRAM:
+    impl: HBM3
+    org:
+      preset: HBM3_16Gb_2R
+      # preset: HBM3_24Gb_3R
+      channel: 1
+      rank: 2
+      # rank: 3
+    timing:
+      preset: HBM3_5.2Gbps
+      # preset: HBM3E_9.6Gbps
+
+  Controller:
+    impl: PIM_DRAM_controller
+    Scheduler:
+      impl: PIM_Scheduler
+    RefreshManager:
+      impl: AllBank
+    plugins:
+    - ControllerPlugin:
+        impl: TraceRecorder
+        path: log/cmd_hbm3.log
+        # path: log/cmd_hbm3E.log
+
+  AddrMapper:
+    impl: RoBaRaCoCh

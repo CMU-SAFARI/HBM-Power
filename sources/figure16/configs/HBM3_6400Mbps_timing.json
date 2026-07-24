@@ -1,0 +1,28 @@
+{
+    "_comment": "HBM3 6400 Mbps speed bin (6.4 Gbps/pin, DDR wrt tCK=625 ps / 1.6 GHz) from ramulator2 v2.1 python/ramulator/dram/hbm3.py (HBM3_6400Mbps). Timing values are full DRAM clock cycles. Basis for H200-class HBM3E modeling at 6.4 Gbps.",
+    "_comment_nBL": "nBL here = BURST LENGTH IN BEATS (BL8 => 8). With dataRate=4 in the org config (HBM3 WCK = 2*f(CK), DDR on WCK => 4 transfers/CK = 6.4 GT/s), the engine computes tBurst = nBL/dataRate = 8/4 = 2 CK = 1.25 ns for a 256-bit read on the 32-bit pseudo-channel. This is NOT ramulator's nBL=2 (its command-bus occupancy; 'HBM CA already takes BL into account'). Same convention as the HBM2 BL4 fix (engine nBL = beats).",
+    "_comment_subset": "The engine core currently consumes: tCK_ps, nBL, nRAS, nRCD, nRCDWR, nRC, nRL, nWL, nCCD_S, nCCD_L, nWTR_S, nWTR_L, nWR, nRP. The remaining ramulator timings are recorded for completeness/future modeling (FAW, RRD, RTP, RTW, refresh) and are ignored for now.",
+    "timing": {
+        "tCK_ps": 625,
+        "nBL": 8,
+        "nRAS": 45,
+        "nRCD": 31,
+        "nRCDWR": 15,
+        "nRC": 72,
+        "nRL": 20,
+        "nWL": 10,
+        "nCCD_S": 2,
+        "nCCD_L": 4,
+        "nWTR_S": 7,
+        "nWTR_L": 10,
+        "nWR": 33,
+        "nRP": 26,
+        "nRTP": 9,
+        "nRRD_S": 4,
+        "nRRD_L": 5,
+        "nFAW": 24,
+        "nRTW": 20,
+        "nREFI": 6240,
+        "nRFCpb": 320
+    }
+}

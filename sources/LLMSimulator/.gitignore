@@ -1,0 +1,9 @@
+# Build artifacts
+build/
+
+# Simulation outputs
+data/
+traces/
+
+# Claude Code working memory
+memory/

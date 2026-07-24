@@ -1,0 +1,31 @@
+{
+    "_comment": "HBM3 6400 MT/s all-0s IDD rails (per pseudo-channel, ECC, off-power excluded) + data-pattern read/write energy model. Reuses the HBM2 sec.16 shape coefficients but DROPS cross-coupling (use_coupling=false) and uses the relative/K-free form: the config IDD4R/IDD4W (all-0s, the reference activity) is scaled by pj(knobs)/pj(reference). dq_rate/tsv_rate/bg_rate are the per-bus activity knobs in [0,1].",
+    "voltage": {
+        "VDD": 1.1,
+        "unit": "V"
+    },
+    "IDD": {
+        "IDD0": 44.6,
+        "IDD2N": 38.3,
+        "IDD3N1": 34.6,
+        "IDD3N16": 36.7,
+        "IDD4R": 630.4,
+        "IDD4W": 505.1,
+        "unit": "mA"
+    },
+    "datapattern": {
+        "enabled": true,
+        "floor_pJbit": 2.759,
+        "coef_T_DQ": 1.192,
+        "coef_T_2bit": 1.331,
+        "coef_busflip": 0.720,
+        "use_coupling": false,
+        "dq_rate": 0.5,
+        "tsv_rate": 0.5,
+        "bg_rate": 0.0,
+        "ref_dq_rate": 0.0,
+        "ref_tsv_rate": 0.0,
+        "ref_bg_rate": 0.0,
+        "apply_to_writes": true
+    }
+}

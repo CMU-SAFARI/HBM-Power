@@ -1,0 +1,32 @@
+Frontend:
+  impl: PIMController
+  clock_ratio: 1
+  path: example_inst.trace
+
+MemorySystem:
+  impl: PIMDRAMSystem
+  clock_ratio: 1
+
+  DRAM:
+    impl: HBM2E              # 7-level HBM2-family model (see HBM2E.cpp)
+    org:
+      preset: HBM2E_8Gb_2R   # 8 Gb/channel => A100 40GB (vs 16Gb for 80GB)
+      channel: 1
+      rank: 1
+      density: 4096          # 1 rank (no SID) => 4Gb effective per channel (was 8Gb_2R)
+    timing:
+      preset: HBM2E_1.2Gbps  # HBM2 1.2Gbps / 600MHz, from user datasheet dump
+
+  Controller:
+    impl: PIM_DRAM_controller
+    Scheduler:
+      impl: PIM_Scheduler
+    RefreshManager:
+      impl: NoRefresh        # refresh disabled (no REF commands in trace)
+    plugins:
+    - ControllerPlugin:
+        impl: TraceRecorder
+        path: log/cmd_hbm2_40gb.log
+
+  AddrMapper:
+    impl: RoBaRaCoCh

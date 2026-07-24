@@ -1,0 +1,15 @@
+{
+    "_comment": "HBM3 16Gb die, 8-high stack (16 GB/stack). Organization from ramulator2 v2.1 python/ramulator/dram/hbm3.py (HBM3_16Gb_8hi). Basis for H200-class HBM3E modeling at 6.4 Gbps. The engine simulates one pseudo-channel; channels_per_stack/stacks/SID scale device totals only, not per-PC energy. HBM3 stack-ID (SID=2 for 8hi) is not modeled here.",
+    "stacks": 1,
+    "channels_per_stack": 16,
+    "pseudochannels_per_channel": 2,
+    "bankgroups_per_pseudochannel": 4,
+    "banks_per_bankgroup": 4,
+    "rows": 16384,
+    "columns": 256,
+    "_comment_columns": "ramulator (1<<5)<<3 = 256; 'HBM CA already takes BL into account'. Metadata only (not used in core energy).",
+    "width": 32,
+    "_comment_width": "per-pseudochannel DQ width in bits (ramulator dq=32). Metadata only (not used in core energy).",
+    "dataRate": 4,
+    "_comment_dataRate": "transfers per tCK. HBM3 drives the data bus from WCK at 2*f(CK), DDR on WCK => 4 transfers per CK cycle (6.4 GT/s at tCK=625ps). So tBurst = nBL/dataRate = 8/4 = 2 cycles = 1.25 ns for a 256-bit (BL8 x 32 DQ) read; full BW ~= 4.9 TB/s across 192 PC."
+}

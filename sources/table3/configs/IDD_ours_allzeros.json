@@ -1,0 +1,16 @@
+{
+  "voltage": {
+    "VDD": 1.2,
+    "unit": "V"
+  },
+  "IDD": {
+    "IDD0": 1260.6,
+    "IDD2N": 1180.2,
+    "IDD3N1": 1190.9,
+    "IDD3N16": 1200.6,
+    "IDD4R": 2496.0,
+    "IDD4W": 1913.9,
+    "unit": "mA",
+    "_note": "Ours all-0s: IDD4R = empirical all-0s read (1717.9) + off-power (778.1); IDD4W = paper IDD4W scaled by read ratio; nominal standby/activate."
+  }
+}

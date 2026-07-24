@@ -1,0 +1,3 @@
+# CMake build output (runners are rebuilt on demand by the figure scripts)
+/build/
+.DS_Store

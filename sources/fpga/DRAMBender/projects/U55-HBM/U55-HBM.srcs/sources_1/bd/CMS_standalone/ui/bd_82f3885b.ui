@@ -1,0 +1,31 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-324,-786",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port s_axi_ctrl_0 -pg 1 -lvl 0 -x -30 -y -680 -defaultsOSRD
+preplace port satellite_uart_0 -pg 1 -lvl 2 -x 460 -y -630 -defaultsOSRD
+preplace port port-id_aclk_ctrl_0 -pg 1 -lvl 0 -x -30 -y -640 -defaultsOSRD
+preplace port port-id_aresetn_ctrl_0 -pg 1 -lvl 0 -x -30 -y -620 -defaultsOSRD
+preplace port port-id_interrupt_host_0 -pg 1 -lvl 2 -x 460 -y -610 -defaultsOSRD
+preplace portBus hbm_temp_1_0 -pg 1 -lvl 0 -x -30 -y -580 -defaultsOSRD
+preplace portBus hbm_temp_2_0 -pg 1 -lvl 0 -x -30 -y -560 -defaultsOSRD
+preplace portBus interrupt_hbm_cattrip_0 -pg 1 -lvl 0 -x -30 -y -600 -defaultsOSRD
+preplace portBus satellite_gpio_0 -pg 1 -lvl 0 -x -30 -y -660 -defaultsOSRD
+preplace inst cms_subsystem_0 -pg 1 -lvl 1 -x 240 -y -430 -defaultsOSRD
+preplace netloc aclk_ctrl_0_1 1 0 1 30J -640n
+preplace netloc aresetn_ctrl_0_1 1 0 1 20J -620n
+preplace netloc cms_subsystem_0_interrupt_host 1 1 1 430J -610n
+preplace netloc hbm_temp_1_0_1 1 0 1 0J -580n
+preplace netloc hbm_temp_2_0_1 1 0 1 -10J -560n
+preplace netloc interrupt_hbm_cattrip_0_1 1 0 1 10J -600n
+preplace netloc satellite_gpio_0_1 1 0 1 40J -660n
+preplace netloc cms_subsystem_0_satellite_uart 1 1 1 420J -630n
+preplace netloc s_axi_ctrl_0_1 1 0 1 50J -680n
+levelinfo -pg 1 -30 240 460
+pagesize -pg 1 -db -bbox -sgen -290 -740 630 240
+"
+}
+0

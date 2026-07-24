@@ -1,0 +1,48 @@
+model:
+  model_name: llama8Bshort
+
+system:
+  gpu_gen: A100 # e.g. A100, H100, B100, B200 (currently only support 4 generation)
+  nvlink_gen: 5
+  infiniband_gen: 800
+  num_node: 1
+  num_device: 1
+  processor_type: GPU
+  distribution:
+    expert_tensor_degree: 1
+    none_expert_tensor_degree: 1
+  optimization:
+    parallel_execution: off
+    hetero_subbatch: off
+    disagg_system: off
+    use_low_unit_moe_only: off
+    use_ramulator: on
+    compressed_kv: on
+    use_absorb: on
+    use_flash_mla: on
+    use_flash_attention: on
+    reuse_kv_cache: on
+    kv_cache_reuse_rate: 0.0
+    prefill_mode: off
+    decode_mode: on
+
+serving:
+  max_batch_size: 32
+  max_process_token: 0
+
+simulation:
+  data: synthesis
+  input_len: 1024
+  output_len: 10
+  precision_byte: 2
+  skewness: 0.0
+  iter: 5
+  injection_rate: 0
+  exit_out_of_memory: off
+  mem_cap_limit: off # if memory usage exceed memory capacity, batchsize modifies
+
+log:
+  print_log: on
+  export_gantt: off
+  output_directory: ../data/
+  gantt_directory: ./gantt

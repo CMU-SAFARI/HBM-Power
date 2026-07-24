@@ -1,0 +1,31 @@
+Frontend:
+  impl: PIMController
+  clock_ratio: 1
+  path: example_inst.trace 
+
+MemorySystem:
+  impl: PIMDRAMSystem
+  clock_ratio: 1
+
+  DRAM:
+    impl: LPDDR5
+    org:
+      preset: LPDDR5_16Gb_x16
+      channel: 1
+      rank: 1
+    timing:
+      preset: LPDDR5_6400
+
+  Controller:
+    impl: PIM_DRAM_controller
+    Scheduler:
+      impl: PIM_Scheduler
+    RefreshManager:
+      impl: AllBank
+    plugins:
+    - ControllerPlugin:
+        impl: TraceRecorder
+        path: log/cmd_lpddr.log
+
+  AddrMapper:
+    impl: RoBaRaCoCh

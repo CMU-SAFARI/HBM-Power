@@ -1,0 +1,13 @@
+.git
+__pycache__
+*.pyc
+.pytest_cache
+.mypy_cache
+.ruff_cache
+build
+cmake-build-*
+
+# Do not send local SSH keys to the image build context. docker-compose mounts
+# these at runtime when they are present.
+aevaluator1
+aevaluator1.pub

@@ -1,0 +1,34 @@
+Frontend:
+  impl: PIMController
+  clock_ratio: 1
+  path: example_inst.trace
+
+MemorySystem:
+  impl: PIMDRAMSystem
+  clock_ratio: 1
+
+  DRAM:
+    impl: HBM2E
+    org:
+      preset: HBM2E_A100_80GB
+      channel: 1
+      rank: 2
+    timing:
+      preset: HBM2E_1.2Gbps   # HBM2 1.2Gbps / 600MHz, from user datasheet dump
+      # Override individual params here without recompiling, e.g.:
+      #   nFAW: 16
+      #   nREFI: 2400
+
+  Controller:
+    impl: PIM_DRAM_controller
+    Scheduler:
+      impl: PIM_Scheduler
+    RefreshManager:
+      impl: NoRefresh   # refresh disabled entirely (no REF commands in trace)
+    plugins:
+    - ControllerPlugin:
+        impl: TraceRecorder
+        path: log/cmd_hbm2e.log
+
+  AddrMapper:
+    impl: RoBaRaCoCh

@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Per-workload MAPE summary across data regimes.}
+\label{tab:mape_summary}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccc}
+\hline
+Model & Data Pattern & Min MAPE (\%) & Max MAPE (\%) & Avg MAPE (\%) \\
+\hline
+\multirow{2}{*}{DRAMSim3} & all-0s & 9.7 & 25.7 & 20.7 \\
+ & random & 16.8 & 46.9 & 39.8 \\
+\hline
+\multirow{2}{*}{FGDRAM HBM2} & all-0s & 9.3 & 25.8 & 20.3 \\
+ & random & 8.4 & 21.5 & 18.5 \\
+\hline
+\multirow{2}{*}{Ours} & all-0s & 6.4 & 11.3 & 8.6 \\
+ & random & 7.0 & 14.1 & 9.2 \\
+\hline
+\end{tabular}%
+}
+\end{table}

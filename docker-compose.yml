@@ -1,0 +1,41 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    image: artifact-hbm2-power-dev:ubuntu24
+    working_dir: /workspace
+    environment:
+      FPGA_SSH_KEY: ${FPGA_SSH_KEY_CONTAINER:-/home/developer/aevaluator1}
+      FPGA_SSH_PUB_KEY: ${FPGA_SSH_PUB_KEY_CONTAINER:-/home/developer/aevaluator1.pub}
+    command:
+      - bash
+      - -lc
+      - |
+        for key in "${FPGA_SSH_KEY_CONTAINER:-/home/developer/aevaluator1}" "${FPGA_SSH_PUB_KEY_CONTAINER:-/home/developer/aevaluator1.pub}"; do
+          if [[ ! -f "$$key" || ! -r "$$key" ]]; then
+            echo "Missing readable FPGA SSH key: $$key" >&2
+            echo "Mount ./aevaluator1 and ./aevaluator1.pub, or override FPGA_SSH_KEY_HOST/FPGA_SSH_PUB_KEY_HOST." >&2
+            exit 1
+          fi
+        done
+        exec bash
+    volumes:
+      - .:/workspace
+      - type: bind
+        source: ${FPGA_SSH_KEY_HOST:-./aevaluator1}
+        target: ${FPGA_SSH_KEY_CONTAINER:-/home/developer/aevaluator1}
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ${FPGA_SSH_PUB_KEY_HOST:-./aevaluator1.pub}
+        target: ${FPGA_SSH_PUB_KEY_CONTAINER:-/home/developer/aevaluator1.pub}
+        read_only: true
+        bind:
+          create_host_path: false
+    stdin_open: true
+    tty: true

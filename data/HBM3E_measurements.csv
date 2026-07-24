@@ -1,0 +1,4 @@
+sample,total_power_W,idle_power_W,read_GBs
+tuning_read_rand,255.22,44.95,4523.3
+quick_145512,247.75,35.55,4520.6
+quick_145735,241.71,34.75,4517.3

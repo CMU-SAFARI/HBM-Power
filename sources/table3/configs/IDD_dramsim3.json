@@ -1,0 +1,16 @@
+{
+  "voltage": {
+    "VDD": 1.2,
+    "unit": "V"
+  },
+  "IDD": {
+    "IDD0": 1198.1,
+    "IDD2N": 1098.1,
+    "IDD3N1": 1218.1,
+    "IDD3N16": 1218.1,
+    "IDD4R": 2022.1,
+    "IDD4W": 2286.1,
+    "unit": "mA",
+    "_note": "DRAMSim3 published -> 1.2GHz rate-correct -> per-PC -> rail(bg*16+dyn*8)+off-power"
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "_comment": "HBM4 canonical organization (JEDEC JESD270-4). 32 channels/stack x 2 pseudo-channels/channel => 64 PC/stack (2048-bit stack interface, 2x HBM3). Canonical device = 16-High (16 dies, 4 SIDs), 16 Gb/channel => 64 GB/stack, 8 stacks/device => 512 GB. Per-PC structure: 32 DQ (PC mode), BL8 (256-bit prefetch / 32 DQ = 8 beats), 1 KB page/PC. The engine simulates ONE pseudo-channel; channels_per_stack/stacks scale device totals only (N_PC), not per-PC energy. SID stacking (4 SIDs at 16-Hi) is not modeled in per-PC core energy. width/columns/rows are metadata (not used in core energy).",
+    "stacks": 8,
+    "channels_per_stack": 32,
+    "pseudochannels_per_channel": 2,
+    "bankgroups_per_pseudochannel": 4,
+    "banks_per_bankgroup": 8,
+    "_comment_banks": "4 BG x 8 banks = 32 banks/PC => 64 banks/channel (HBM4 max). HBM4 supports 16/32/48/64 banks/channel by density.",
+    "rows": 32768,
+    "columns": 512,
+    "width": 32,
+    "_comment_width": "per-pseudochannel DQ width in bits (PC mode = 32 DQ). Metadata only.",
+    "dataRate": 4,
+    "_comment_dataRate": "transfers per tCK. HBM4 drives the data bus from WDQS at 2*f(CK), DDR => 4 transfers per CK cycle (e.g. 6.4 GT/s at tCK=625 ps; fCK = rate/4). tBurst = nBL/dataRate = 8/4 = 2 cycles for a 256-bit (BL8 x 32 DQ) access. Same convention as HBM3."
+}
