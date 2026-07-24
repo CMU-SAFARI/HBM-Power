@@ -4,7 +4,7 @@ This repository contains the data, source code, and scripts needed to reproduce 
 
 **Our infrastructure is not designed to accommodate multiple experiments running simultaneously. We kindly ask reviewers to coordinate among themselves and begin evaluating our artifact as early as possible, as only one reviewer can successfully conduct the experiments at a time.**
 
-We expect an end-to-end run of the artifact to take approximately 10 hours. A large fraction of this time is spent on FPGA-based HBM2 experiments (approximately 8 hours), which are designed to run in the background without requiring input from the artifact evaluator.
+We expect an end-to-end run of the artifact to take approximately 12 hours. A large fraction of this time is spent on FPGA-based HBM2 experiments (approximately 10 hours), which are designed to run in the background without requiring input from the artifact evaluator.
 
 ## Artifact overview
 
@@ -133,7 +133,7 @@ Run everything with `run_all.sh` (below), run the four components one by one, or
 
 ```bash
 export VAST_API_KEY=<key-from-HotCRP>
-./run_all.sh                            # ~8 hours (dominated by the FPGA step)
+./run_all.sh                            # ~10 hours (dominated by the FPGA step)
 ./run_all.sh --continue                 # resume after a transient failure
 ```
 
@@ -147,7 +147,7 @@ The per-component scripts below are the same steps run individually; use them fo
 ./run_hbm2_characterization.sh          # add --resume to continue an interrupted run
 ```
 
-Reprograms our FPGA and runs the single-chip IDD/structural/trace measurements over SSH. **Runtime ~8 hours** — the most time-intensive and involved component. Requires the FPGA SSH keys. See [`scripts/fpga/README.md`](scripts/fpga/README.md).
+Reprograms our FPGA and runs the single-chip IDD/structural/trace measurements over SSH. **Runtime ~10 hours** — the most time-intensive and involved component. Requires the FPGA SSH keys. See [`scripts/fpga/README.md`](scripts/fpga/README.md).
 
 *Success:* the run finishes with the standardized FPGA CSVs plus `ground_truth_{allzeros,random}.csv` written under `data/new/fpga/`, matching the schema of the committed files in `data/`.
 
