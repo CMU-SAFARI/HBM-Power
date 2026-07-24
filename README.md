@@ -137,7 +137,7 @@ export VAST_API_KEY=<key-from-HotCRP>
 ./run_all.sh --continue                 # resume after a transient failure
 ```
 
-Each step is checkpointed (`temp/run_all_checkpoint.txt`). If a step fails — e.g. a transient vast.ai error — fix the cause and re-run with `--continue`: completed steps, including the ~8-hour FPGA run, are skipped. The key is only checked while the H200 step is still pending, so a `--continue` that just needs the power-model/figure steps needs no key. On success the script prints `all done`.
+Each step is checkpointed (`temp/run_all_checkpoint.txt`). If a step fails — e.g. a transient vast.ai error — fix the cause and re-run with `--continue`: completed steps, including the ~10-hour FPGA run, are skipped. The key is only checked while the H200 step is still pending, so a `--continue` that just needs the power-model/figure steps needs no key. On success the script prints `all done`.
 
 The per-component scripts below are the same steps run individually; use them for the hardware-free fast-forward path (3–4) or to run one component at a time.
 
