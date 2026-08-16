@@ -107,7 +107,7 @@ plt.savefig(FIG_DIR / f"{Path(__file__).stem}.pdf")
 
 # --- Numbers reported in the paper (Figure 9, Sec. 5.1.2) ---
 # Paper: "on average across all measurement loops and tested HBM2 stacks, current
-#         increases by 6.8 mA every 1 C."
+#         increases by 6.7 mA every 1 C."
 per_group = df_slopes[df_slopes["IDD"] != "Average"]["slope_mA_per_C"]
 avg_box = df_slopes[df_slopes["IDD"] == "Average"]["slope_mA_per_C"]
 print("\n--- Numbers reported in the paper (Figure 9) ---")

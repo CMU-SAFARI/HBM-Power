@@ -83,7 +83,7 @@ plt.tight_layout()
 plt.savefig(FIG_DIR / f"{Path(__file__).stem}.pdf", bbox_inches="tight")
 
 # --- Numbers reported in the paper (Figure 6, Sec. 5.1) ---
-# Paper: IDD0 mean/std across tested stacks = 310.6 / 18.0 mA.
+# Paper: IDD0 mean/std across tested stacks = 310.3 / 17.3 mA.
 # NOTE: across-stack std reproduces the notebook's barplot cell, which appends a
 # synthetic "Average" point (= the mean) to the per-stack values before std.
 sub = df[df["test_loop"] == "IDD0"]
