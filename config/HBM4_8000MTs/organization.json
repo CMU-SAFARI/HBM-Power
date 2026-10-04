@@ -1,0 +1,12 @@
+{
+    "_comment": "One HBM4 stack (JESD270-4): 32 channels x 2 pseudo-channels, 2 bank groups x 8 banks per pseudo-channel, 32 DQ per pseudo-channel, 4 transfers per clock. The runner simulates one pseudo-channel; channel and stack counts are metadata.",
+    "stacks": 1,
+    "channels_per_stack": 32,
+    "pseudochannels_per_channel": 2,
+    "bankgroups_per_pseudochannel": 2,
+    "banks_per_bankgroup": 8,
+    "rows": 32768,
+    "columns": 32,
+    "width": 32,
+    "dataRate": 4
+}

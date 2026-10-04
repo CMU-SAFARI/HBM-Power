@@ -1,0 +1,41 @@
+{
+    "voltage": {
+        "VDD": 1.1,
+        "unit": "V"
+    },
+    "IDD": {
+        "IDD0": 176.6,
+        "IDD2N": 141.0,
+        "IDD3N1": 141.7,
+        "IDD3N16": 143.8,
+        "IDD4R": 631.2,
+        "IDD4W": 460.0,
+        "unit": "mA",
+        "IDD5B": 235.2
+    },
+    "datapattern": {
+        "enabled": true,
+        "floor_pJbit": 2.759,
+        "coef_T_DQ": 1.192,
+        "coef_T_2bit": 1.331,
+        "coef_busflip": 0.72,
+        "use_coupling": false,
+        "dq_rate": 0.5,
+        "tsv_rate": 0.5,
+        "bg_rate": 0.5,
+        "ref_dq_rate": 0.0,
+        "ref_tsv_rate": 0.0,
+        "ref_bg_rate": 0.0,
+        "apply_to_writes": true
+    },
+    "extrapolation": {
+        "IDD3N1_minus_IDD2N_mA": 0.72,
+        "IDD3N16_minus_IDD3N1_mA": 2.12,
+        "act_increment_mA": 35.6,
+        "act_increment_rel_slope_per_MTs": 9.03e-05,
+        "act_increment_mA_at_1200": 18.88,
+        "ref_increment_mA": 93.49,
+        "ref_increment_rel_slope_per_MTs": 6.75e-05,
+        "ref_increment_mA_at_1200": 60.68
+    }
+}

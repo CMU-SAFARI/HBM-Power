@@ -1,0 +1,4 @@
+metric,mem_power_W,read_GBs
+idle_baseline,34.75,
+random_read_total,241.71,4517.3
+random_read_active(read-idle),206.96,

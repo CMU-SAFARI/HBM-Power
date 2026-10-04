@@ -1,0 +1,27 @@
+{
+    "_comment": "HBM3E at 6400 MT/s (tCK 625 ps), Ramulator 2 HBM3_6400Mbps timings in clock cycles. nBL is the burst length in beats (BL8). nRFC = 350 ns is an assumption (not from JESD238). Timings the engine does not use (nFAW, nRRD_*, nRTP, nRTW, nREFI, nRFCpb) are kept for reference.",
+    "timing": {
+        "tCK_ps": 625,
+        "nBL": 8,
+        "nRAS": 45,
+        "nRCD": 31,
+        "nRCDWR": 15,
+        "nRC": 72,
+        "nRL": 20,
+        "nWL": 10,
+        "nCCD_S": 2,
+        "nCCD_L": 4,
+        "nWTR_S": 7,
+        "nWTR_L": 10,
+        "nWR": 33,
+        "nRP": 26,
+        "nRTP": 9,
+        "nRRD_S": 4,
+        "nRRD_L": 5,
+        "nFAW": 24,
+        "nRTW": 20,
+        "nREFI": 6240,
+        "nRFCpb": 320,
+        "nRFC": 560
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "stacks": 8,
+    "channels_per_stack": 32,
+    "pseudochannels_per_channel": 2,
+    "bankgroups_per_pseudochannel": 2,
+    "banks_per_bankgroup": 8,
+    "rows": 32768,
+    "columns": 32,
+    "width": 32,
+    "dataRate": 4
+}

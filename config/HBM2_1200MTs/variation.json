@@ -1,0 +1,9 @@
+{
+    "_comment": "Structural (spatial) variation of HBM2 read and write current across bank groups and banks, from the bank-group-pair and bank-offset measurement loops of the paper (Section 5.2; reads: 36 chips, writes: 16 chips). Per-bank current scale = bankgroup[bg] x bank[bank]. Factors are fitted to the device-only loop current above the standby share of the idle pseudo-channels and normalized to average 1 over the 16 banks of a pseudo-channel, so a workload that spreads accesses evenly over all banks sees the configured IDD4R/IDD4W. The fit reproduces the measured ratios: reading bank groups 0+2 draws 8.1% more than bank groups 1+3 (writes 3.5%); reading bank 0 or 1 draws 5.3% more than bank 3, bank 2 0.4% more (writes: below 1%). Applies to HBM2 (4 bank groups x 4 banks); pass it as the fifth argument of HBM2_runner.",
+    "scaling_factors": {
+        "bankgroup": [1.0391, 0.9603, 1.0411, 0.9595],
+        "bank": [1.0259, 1.0253, 0.9763, 0.9725],
+        "bankgroup_write": [1.0183, 0.9825, 1.0175, 0.9816],
+        "bank_write": [1.0028, 0.9998, 1.0006, 0.9969]
+    }
+}

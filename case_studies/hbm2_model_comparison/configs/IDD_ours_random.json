@@ -1,0 +1,18 @@
+{
+  "voltage": {
+    "VDD": 1.2,
+    "unit": "V"
+  },
+  "IDD": {
+    "IDD0": 1143.7,
+    "IDD2N": 1009.4,
+    "IDD3N1": 1014.5,
+    "IDD3N16": 1029.6,
+    "IDD4R": 3558.2,
+    "IDD4W": 2738.5,
+    "unit": "mA"
+  },
+  "datapattern": {
+    "enabled": false
+  }
+}

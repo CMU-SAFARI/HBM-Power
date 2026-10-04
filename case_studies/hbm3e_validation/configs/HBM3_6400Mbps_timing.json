@@ -1,0 +1,26 @@
+{
+    "timing": {
+        "tCK_ps": 625,
+        "nBL": 8,
+        "nRAS": 45,
+        "nRCD": 31,
+        "nRCDWR": 15,
+        "nRC": 72,
+        "nRL": 20,
+        "nWL": 10,
+        "nCCD_S": 2,
+        "nCCD_L": 4,
+        "nWTR_S": 7,
+        "nWTR_L": 10,
+        "nWR": 33,
+        "nRP": 26,
+        "nRTP": 9,
+        "nRRD_S": 4,
+        "nRRD_L": 5,
+        "nFAW": 24,
+        "nRTW": 20,
+        "nREFI": 6240,
+        "nRFCpb": 320,
+        "nRFC": 560
+    }
+}

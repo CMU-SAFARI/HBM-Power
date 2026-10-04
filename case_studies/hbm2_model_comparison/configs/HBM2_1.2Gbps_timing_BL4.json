@@ -1,0 +1,19 @@
+{
+  "timing": {
+    "tCK_ps": 1666.7,
+    "nBL": 4,
+    "nRCD": 9,
+    "nRCDWR": 6,
+    "nRP": 9,
+    "nRAS": 20,
+    "nRC": 29,
+    "nCL": 22,
+    "nWL": 7,
+    "nRL": 7,
+    "nCCD_S": 2,
+    "nCCD_L": 2,
+    "nWTR_L": 6,
+    "nWTR_S": 3,
+    "nWR": 10
+  }
+}

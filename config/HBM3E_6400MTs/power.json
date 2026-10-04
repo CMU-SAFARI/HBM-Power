@@ -1,0 +1,31 @@
+{
+    "_comment": "Per-pseudo-channel HBM3E currents at 6400 MT/s, VDD 1.1 V, with static (all-0s) data, extrapolated from the HBM2 measurements along their measured data-rate trends (docs/explanation/idd-derivation.md). Standby is split over all 16 pseudo-channels of the measured HBM2 stack, and the command-driven increments over the 8 pseudo-channels the measurement loops drive: every rail = stack rail / 8 - stack IDD2N / 16. Device power is therefore the sum over all pseudo-channels, each run with its own trace (an idle trace for unused pseudo-channels). Data-pattern model fitted to the HBM2 beat-pattern measurements (relative form). IDD4R/IDD4W are the currents with static data (all knobs 0, the reference); the knobs default to 0.5 (uniform-random data). Override them with --dq-rate/--tsv-rate/--bg-rate.",
+    "voltage": {
+        "VDD": 1.1,
+        "unit": "V"
+    },
+    "IDD": {
+        "IDD0": 106.1,
+        "IDD2N": 70.5,
+        "IDD3N1": 71.2,
+        "IDD3N16": 73.3,
+        "IDD4R": 560.7,
+        "IDD4W": 389.5,
+        "IDD5B": 164.7,
+        "unit": "mA"
+    },
+    "datapattern": {
+        "enabled": true,
+        "floor_pJbit": 3.1798,
+        "coef_T_DQ": 1.04,
+        "coef_T_2bit": 1.4875,
+        "coef_busflip": 1.41,
+        "dq_rate": 0.5,
+        "tsv_rate": 0.5,
+        "bg_rate": 0.5,
+        "ref_dq_rate": 0.0,
+        "ref_tsv_rate": 0.0,
+        "ref_bg_rate": 0.0,
+        "apply_to_writes": true
+    }
+}

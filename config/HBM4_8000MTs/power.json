@@ -1,0 +1,32 @@
+{
+    "_comment": "Per-pseudo-channel HBM4 currents at 8000 MT/s with static (all-0s) data, extrapolated from the HBM3E rails (docs/explanation/hbm4-power-prediction.md). Split rails: VDDC 1.05 V (core), VDDQ 0.9 V (DQ pins). Standby is split over all 16 pseudo-channels of the measured HBM2 stack, and the command-driven increments over the 8 pseudo-channels the measurement loops drive: every rail = stack rail / 8 - stack IDD2N / 16. Device power is therefore the sum over all pseudo-channels, each run with its own trace (an idle trace for unused pseudo-channels). Data-pattern model fitted to the HBM2 beat-pattern measurements (relative form). IDD4R/IDD4W are the currents with static data (all knobs 0, the reference); the knobs default to 0.5 (uniform-random data). Override them with --dq-rate/--tsv-rate/--bg-rate.",
+    "voltage": {
+        "VDD": 1.05,
+        "VDDQ": 0.9,
+        "unit": "V"
+    },
+    "IDD": {
+        "IDD0": 128.9,
+        "IDD2N": 88.1,
+        "IDD3N1": 88.9,
+        "IDD3N16": 91.0,
+        "IDD4R": 700.9,
+        "IDD4W": 486.9,
+        "IDD5B": 192.5,
+        "unit": "mA"
+    },
+    "datapattern": {
+        "enabled": true,
+        "floor_pJbit": 3.1798,
+        "coef_T_DQ": 1.04,
+        "coef_T_2bit": 1.4875,
+        "coef_busflip": 1.41,
+        "dq_rate": 0.5,
+        "tsv_rate": 0.5,
+        "bg_rate": 0.5,
+        "ref_dq_rate": 0.0,
+        "ref_tsv_rate": 0.0,
+        "ref_bg_rate": 0.0,
+        "apply_to_writes": true
+    }
+}

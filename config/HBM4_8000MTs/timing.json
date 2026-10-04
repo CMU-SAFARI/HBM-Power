@@ -1,0 +1,23 @@
+{
+    "_comment": "HBM4 at 8000 MT/s (tCK 500 ps). tRC/tRAS/tRP from JESD270-4 (48/33/15 ns); nCCD_S/nCCD_L = 2/4 clock cycles; the other timings carried over from HBM3E 6400 MT/s at constant ns. nRFC = 350 ns is an assumption.",
+    "timing": {
+        "tCK_ps": 500.0,
+        "nBL": 8,
+        "nRC": 96,
+        "nRAS": 66,
+        "nRP": 30,
+        "nRCD": 39,
+        "nRCDWR": 19,
+        "nRL": 25,
+        "nWL": 13,
+        "nCCD_S": 2,
+        "nCCD_L": 4,
+        "nWTR_S": 9,
+        "nWTR_L": 13,
+        "nWR": 42,
+        "nRTP": 12,
+        "nREFI": 7800,
+        "nRFCpb": 560,
+        "nRFC": 700
+    }
+}

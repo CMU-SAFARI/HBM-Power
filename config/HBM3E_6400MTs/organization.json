@@ -1,0 +1,12 @@
+{
+    "_comment": "HBM3E 16 Gb die, 8-high stack: 16 channels x 2 pseudo-channels, 4 bank groups x 4 banks per pseudo-channel, 32 DQ per pseudo-channel, 4 transfers per clock. Organization from Ramulator 2 (HBM3_16Gb_8hi). The runner simulates one pseudo-channel; channel and stack counts are metadata.",
+    "stacks": 1,
+    "channels_per_stack": 16,
+    "pseudochannels_per_channel": 2,
+    "bankgroups_per_pseudochannel": 4,
+    "banks_per_bankgroup": 4,
+    "rows": 16384,
+    "columns": 32,
+    "width": 32,
+    "dataRate": 4
+}

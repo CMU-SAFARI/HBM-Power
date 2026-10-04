@@ -1,0 +1,31 @@
+{
+    "_comment": "Per-pseudo-channel HBM2 currents at 1200 MT/s, VDD 1.2 V, derived from measurements of real HBM2 chips (docs/explanation/idd-derivation.md). DRAM device only: the FPGA board's power-off current (821.3 mA) is subtracted from the measured board currents. IDD5B is the back-to-back all-bank refresh current (REFA every tRFC). Standby is split over all 16 pseudo-channels of the measured HBM2 stack, and the command-driven increments over the 8 pseudo-channels the measurement loops drive: every rail = stack rail / 8 - stack IDD2N / 16. Device power is therefore the sum over all pseudo-channels, each run with its own trace (an idle trace for unused pseudo-channels). Data-pattern model fitted to the HBM2 beat-pattern measurements (relative form). IDD4R/IDD4W are the currents with static data (all knobs 0, the reference); the knobs default to 0.5 (uniform-random data). Override them with --dq-rate/--tsv-rate/--bg-rate.",
+    "voltage": {
+        "VDD": 1.2,
+        "unit": "V"
+    },
+    "IDD": {
+        "IDD0": 28.544,
+        "IDD2N": 11.756,
+        "IDD3N1": 12.394,
+        "IDD3N16": 14.281,
+        "IDD4R": 202.769,
+        "IDD4W": 137.406,
+        "IDD5B": 66.331,
+        "unit": "mA"
+    },
+    "datapattern": {
+        "enabled": true,
+        "floor_pJbit": 3.1798,
+        "coef_T_DQ": 1.04,
+        "coef_T_2bit": 1.4875,
+        "coef_busflip": 1.41,
+        "dq_rate": 0.5,
+        "tsv_rate": 0.5,
+        "bg_rate": 0.5,
+        "ref_dq_rate": 0.0,
+        "ref_tsv_rate": 0.0,
+        "ref_bg_rate": 0.0,
+        "apply_to_writes": true
+    }
+}
