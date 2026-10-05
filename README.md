@@ -20,16 +20,12 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-orange.svg" alt="License: BSD 3-Clause"></a>
 </p>
 
-Ayna is a trace-driven power model for High Bandwidth Memory (HBM) that captures
-both structural and data-pattern-dependent power variation and is substantially
+Ayna is a trace-driven power model for High Bandwidth Memory (HBM) built from detailed 
+characterization of 36 real HBM2 chips. Ayna captures
+structural and data-pattern-dependent power variation and is substantially
 more accurate than state-of-the-art HBM power models. 
 
-Ayna is based on [DRAMPower](https://github.com/tukl-msd/DRAMPower). We make the
-following changes to the baseline DRAMPower model: 1) add HBM2/3/4 organization
-and command timing specifications, 2) implement the IDD values obtained from our
-characterization study, 3) extend the model to capture structural power
-variation across bank groups and banks in the HBM2 chip, and 4) we extend the
-model to capture data pattern dependence of power. See [docs/reference/changes-from-drampower.md](docs/reference/changes-from-drampower.md) for more details.
+Ayna builds on [DRAMPower](https://github.com/tukl-msd/DRAMPower) and extends it with: (1) HBM2, HBM3/HBM3E, and HBM4 organizations and timings; (2) experimentally measured HBM current values; (3) structural power variation across bank groups and banks; and (4) data-pattern-dependent power modeling. See [docs/reference/changes-from-drampower.md](docs/reference/changes-from-drampower.md) for more details.
 
 Given a memory organization, a timing configuration, a set of IDD currents and a
 DRAM command trace, Ayna reports the energy and average power of that trace.
