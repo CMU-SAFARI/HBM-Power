@@ -20,10 +20,12 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-orange.svg" alt="License: BSD 3-Clause"></a>
 </p>
 
-Ayna is a trace-driven power model for High Bandwidth Memory (HBM) built from detailed 
-characterization of 36 real HBM2 chips. Ayna captures
-structural and data-pattern-dependent power variation and is substantially
-more accurate than state-of-the-art HBM power models. 
+Ayna is a trace-driven power model for High Bandwidth Memory (HBM) built from
+detailed characterization of 36 real HBM2 chips. Ayna captures structural and
+data-pattern-dependent power variation and is substantially more accurate than
+state-of-the-art HBM power models. Ayna is integrated into and readily available
+to use with our memory system simulator [Ramulator
+2.1](https://github.com/CMU-SAFARI/ramulator2).
 
 Ayna builds on [DRAMPower](https://github.com/tukl-msd/DRAMPower) and extends it with: (1) HBM2, HBM3/HBM3E, and HBM4 organizations and timings; (2) experimentally measured HBM current values; (3) structural power variation across bank groups and banks; and (4) data-pattern-dependent power modeling. See [docs/reference/changes-from-drampower.md](docs/reference/changes-from-drampower.md) for more details.
 
@@ -61,6 +63,14 @@ Please cite the following paper if you use Ayna:
   year      = {2026}
 }
 ```
+
+### Related Projects
+
+- Ayna builds on [DRAM Bender](https://github.com/CMU-SAFARI/DRAM-Bender), our 
+  FPGA-based infrastructure for testing real DRAM chips. See the
+  [DRAM Bender paper](https://arxiv.org/abs/2211.05838).
+- Ayna is integrated into [Ramulator 2.1](https://github.com/CMU-SAFARI/ramulator2).
+  See the [Ramulator 2.1 paper](https://arxiv.org/abs/2606.13844).
 
 ## Quick Start
 
