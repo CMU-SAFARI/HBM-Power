@@ -14,7 +14,7 @@
 
 <!-- TODO: replace XXXX.XXXXX with the arXiv ID -->
 <p align="center">
-  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-Coming_Soon-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://arxiv.org/abs/2610.14244"><img src="https://img.shields.io/badge/arXiv-2610.14244-b31b1b.svg" alt="arXiv"></a>
   <img src="https://img.shields.io/badge/MICRO-2026-blue.svg" alt="MICRO 2026">
   <a href="https://doi.org/10.5281/zenodo.21531486"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21531486.svg" alt="Artifact DOI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-orange.svg" alt="License: BSD 3-Clause"></a>
@@ -36,7 +36,7 @@ results of our MICRO 2026 paper: validation against measured HBM2 and HBM3E
 power, data-pattern-dependent power modeling, and HBM4 read energy estimation.
 
 
-- Extended version of our paper on arXiv: Link TBD
+- Extended version of our paper on arXiv: https://arxiv.org/abs/2610.14244
 - Characterization data and artifacts: <https://github.com/CMU-SAFARI/HBM-Power/tree/artifact>
   (officially artifact evaluated as available, functional, and reproduced)
 
